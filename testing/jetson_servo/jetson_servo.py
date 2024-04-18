@@ -44,8 +44,8 @@ def main():
     # set pin as an output pin with optional initial state of HIGH
     GPIO.setup(output_pin, GPIO.OUT, initial=GPIO.HIGH)
     print(output_pin)
-    p = GPIO.PWM(output_pin, 50)
-    val = 25
+    p = GPIO.PWM(output_pin, 100)
+    val = 5
     incr = 5
     p.start(val)
 
