@@ -1,36 +1,22 @@
 import cv2, queue, threading
-class VideoCapture:
-    def __init__(self, name):
-        self.cap = cv2.VideoCapture(name)
-        self.q = queue.Queue()
-        t = threading.Thread(target=self._reader)
-        t.daemon = True
-        t.start()
-
-    def _reader(self):
-        while True:
-            ret, frame = self.cap.read()
-            if not ret:
-                break
-            if not self.q.empty():
-                try:
-                    self.q.get_nowait()
-                except queue.Empty:
-                    pass
-            self.q.put(frame)
-
-    def read(self):
-        return self.q.get()
-
-
-
-if __name__ == '__main__':
-    cam = VideoCapture(0)
+class Camera:
+    def __init__(self, id, fileName, output_path):
+        self.camera = cv2.VideoCapture(id)
+        # check if camera is open
+        if (self.camera.isOpened() == False):  
+            raise Exception("Camera is opened by another program") 
+        
+        # get camera resolution
+        frame_width = int(self.camera.get(3)) 
+        frame_height = int(self.camera.get(4))  
+        self.size = (frame_width, frame_height) 
+        self.video_file = cv2.VideoWriter(output_path+str(fileName)+'.avi', cv2.VideoWriter_fourcc(*'MJPG'), 10, self.size)
     
-    while True:
-        cv2.imshow("frame1",cam.read())
+    def read(self):
+        ret, frame = self.camera.read() 
+        if ret == True:
+            self.video_file.write(frame)
 
-        if cv2.waitKey(1) == ord('q'):
-            break
-
-
+    def __del__(self):
+        self.camera.release() 
+        cv2.destroyAllWindows() 
