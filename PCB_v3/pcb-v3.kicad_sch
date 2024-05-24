@@ -4210,6 +4210,16 @@
 		)
 		(uuid "cfcfda82-e960-4b07-be7e-1a8b7816f93f")
 	)
+	(text "LC78_05-3.0"
+		(exclude_from_sim no)
+		(at 185.42 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e5d61a34-d44b-49fa-9494-3a64cf25a2ef")
+	)
 	(text "Jetson"
 		(exclude_from_sim no)
 		(at 106.68 41.91 0)
