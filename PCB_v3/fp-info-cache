@@ -1,4 +1,4 @@
-23155685259114803
+23165983207901197
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -52406,8 +52406,8 @@ CRE1S Boost Converter
 
 
 0
-0
-0
+4
+4
 Crystal
 Crystal_AT310_D3.0mm_L10.0mm_Horizontal
 Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
@@ -56720,6 +56720,48 @@ Fuse Fuseholder TR5 Littelfuse/Wickmann No. 460 No560
 0
 2
 2
+GroundBounceLibrary
+01x02_PinHeader
+
+
+0
+2
+2
+GroundBounceLibrary
+2_Pin_Header
+
+
+0
+2
+2
+GroundBounceLibrary
+74HC04D
+
+
+0
+14
+14
+GroundBounceLibrary
+74HC174
+
+
+0
+16
+16
+GroundBounceLibrary
+Conn_01x02_PinHeader
+
+
+0
+2
+2
+GroundBounceLibrary
+Jack_142-0701-801
+
+
+0
+5
+5
 Heatsink
 Heatsink_35x26mm_1xFixation3mm_Fischer-SK486-35
 Heatsink, 35mm x 26mm, 1x Fixation 3mm, Fischer SK486-35
